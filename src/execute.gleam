@@ -1,11 +1,11 @@
 import gleam/io
 import gleam/list
 import tools
+import types
 
 pub fn integer_handler(list: List(String)) -> Bool {
   tools.pass("Found an Integer")
-  let result = list.first(list)
-  case result {
+  case list.first(list) {
     Ok(string) -> {
       tools.info("Variable Name " <> string)
     }
@@ -19,7 +19,7 @@ pub fn integer_handler(list: List(String)) -> Bool {
 pub fn function_handler(list: List(String)) -> Bool {
   tools.pass("Found a Function")
   let result = list.first(list)
-  case result {
+  case list.first(list) {
     Ok(string) -> {
       tools.info("Variable Name " <> string)
     }
@@ -33,7 +33,7 @@ pub fn function_handler(list: List(String)) -> Bool {
 pub fn string_handler(list: List(String)) -> Bool {
   tools.pass("Found a String")
   let result = list.first(list)
-  case result {
+  case list.first(list) {
     Ok(string) -> {
       tools.info("Variable Name " <> string)
     }

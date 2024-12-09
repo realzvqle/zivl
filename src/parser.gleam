@@ -20,6 +20,15 @@ fn parse_type(s: String) {
         "string" -> {
           execute.string_handler(list)
         }
+        "\r" -> {
+          True
+        }
+        "" -> {
+          True
+        }
+        " " -> {
+          True
+        }
         _ -> {
           tools.fail("Error: Invalid Type")
           False

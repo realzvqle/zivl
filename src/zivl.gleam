@@ -2,9 +2,10 @@ import fileio
 import gleam/io
 import gleam/string
 import parser
+import tools
 
 pub fn main() {
-  let result = fileio.read_file("idk.zl")
+  let result = fileio.read_file("script.zl")
   case result {
     Ok(content) -> {
       let lines = string.split(content, "\n")
@@ -12,7 +13,7 @@ pub fn main() {
       Nil
     }
     Error(_) -> {
-      io.println("Failure to Read File")
+      tools.fail("Failure to Read File")
     }
   }
 }
