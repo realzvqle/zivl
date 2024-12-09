@@ -1,5 +1,4 @@
 import fileio
-import gleam/io
 import gleam/string
 import parser
 import tools
