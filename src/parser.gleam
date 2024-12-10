@@ -46,7 +46,9 @@ pub fn split_file(content: List(String)) {
   case content {
     [] -> tools.info("Finished Operating file")
     [current, ..next] -> {
-      parse_type(current)
+      let cleanedcurrent = string.replace(current, "\r", "")
+      tools.info(cleanedcurrent)
+      parse_type(cleanedcurrent)
       split_file(next)
     }
   }
